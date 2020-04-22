@@ -1,16 +1,14 @@
 //
-// Created by Arana Fireheart on 1/30/20.
+// Created by Ryan Simas on 2/18/20.
 //
 
 #ifndef CRAPSSTARTER_DIE_H
 #define CRAPSSTARTER_DIE_H
 
-//
-// Created by Arana Fireheart on 1/30/20.
-//
 #include <string>
 
-class Die {
+class Die
+        {
 protected:
     int numberOfSides;
     int startingValue;
@@ -37,8 +35,10 @@ public:
     std::string getName();
 };
 
-struct BadDieValueException : public std::exception {
-    const char * what() const throw() {
+struct BadDieValueException : public std::exception
+        {
+    const char * what() const throw()
+    {
         return "Can't set die value; value out of range.";
     }
 };
